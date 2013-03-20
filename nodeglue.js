@@ -7,6 +7,8 @@ var clsheader = fs.readFileSync(
   'templates/class.h','utf8');
 var clscpp = fs.readFileSync(
   'templates/class.cpp','utf8');
+var gyp = fs.readFileSync(
+  'templates/binding.gyp','utf8');
 
 var definition = {
   modulename : 'mymod',
@@ -34,3 +36,5 @@ _(definition.classes).each(function (clsname) {
     clsname : clsname
   }));
 });
+
+console.log(_.template(gyp, definition));
