@@ -12,6 +12,5 @@ extern "C" {
   {<% _.each(clsnames, function(clsname) { %>
     <%=clsname%>::Init(target); <% }) %>
   }
-
   NODE_MODULE(<%=modulename%>, init);
 }
