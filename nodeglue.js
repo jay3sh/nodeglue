@@ -5,6 +5,8 @@ var modulecpp = fs.readFileSync(
   'templates/module.cpp','utf8');
 var clsheader = fs.readFileSync(
   'templates/class.h','utf8');
+var clscpp = fs.readFileSync(
+  'templates/class.cpp','utf8');
 
 var definition = {
   modulename : 'mymod',
@@ -25,6 +27,10 @@ console.log(_.template(modulecpp, {
 _(definition.classes).each(function (clsname) {
   console.log(_.template(clsheader, {
     headermarker : '__'+clsname.toUpperCase()+'_H__',
+    clsname : clsname
+  }));
+  console.log(_.template(clscpp, {
+    headername : clsname.toLowerCase(),
     clsname : clsname
   }));
 });
