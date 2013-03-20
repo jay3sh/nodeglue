@@ -1,0 +1,10 @@
+{
+  "name" : "nodeglue",
+  "description" : "Node C++ Bindings Generator",
+  "version" : "0.0.1",
+  "author" : "Jayesh Salvi",
+  "dependencies" : {
+    "underscore" : "1.4.4"
+  },
+  "engines" : { "node" : ">=0.6.0" }
+}
